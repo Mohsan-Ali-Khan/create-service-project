@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    'comma-dangle': 'off',
     'arrow-parens': 'off',
     'import/no-unresolved': 'off',
     'jsx-quotes': [2, 'prefer-single'],

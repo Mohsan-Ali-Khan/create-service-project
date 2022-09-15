@@ -1,0 +1,116 @@
+import { useState } from 'react'
+import { BsPlusLg } from 'react-icons/bs'
+import PlansForm from 'components/PlansForm'
+
+import 'containers/createService/styles.scss'
+
+function CreateService() {
+  const [spin, setSpin] = useState(true)
+  const [openNewPlan, setOpenNewPlan] = useState(true)
+  const [plansData, setPlansData] = useState([])
+  return (
+    <div className='main-survey-container'>
+      <div className='survey-container'>
+        <div className='cancel-survey'>
+          <h3>Create Product or Service</h3>
+          <h4 className='sectionHeading'>General Info</h4>
+          <form className='product-form'>
+            <div className='product-Wrapper'>
+              <div className='productName-Wrapper'>
+                <label className='productName-label'>Product Name</label>
+                <label className='productName-label'>
+                  Product Image (Optional)
+                </label>
+              </div>
+              <div className='productImage-Wrapper'>
+                <input
+                  type='text'
+                  className='input-1'
+                  placeholder='E.g. Website Maintainance, SEO, etc'
+                />
+
+                <div className='product-addImageWrapper'>
+                  <div className='imageMainDiv'>
+                    <div
+                      className='product-addImage'
+                      onClick={() => {
+                        setSpin(!spin)
+                      }}
+                      onKeyDown={() => {
+                        setSpin(!spin)
+                      }}
+                      tabIndex={0}
+                      role='button'
+                    >
+                      {spin ? (
+                        <BsPlusLg className='product-addIcon' />
+                      ) : (
+                        <button type='button' style={{ border: 'none' }}>
+                          <div className='spinner-container'>
+                            <div className='loading-spinner' />
+                          </div>
+                        </button>
+                      )}
+                    </div>
+
+                    {!spin && (
+                      <div className='imageButtons'>
+                        <p className='editImage'>Edit</p>
+                        <p className='removeImage'>Remove</p>
+                      </div>
+                    )}
+                  </div>
+
+                  <p className='product-addImageDesc'>
+                    Upload a square image that doesn&apos;t exceed 2 MB
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <h4 className='sectionHeading'>Pricing Plans</h4>
+            <p className='product-pricingDesc'>
+              Create pricing plans for this product/service. Note that every
+              product/service can have multiple plans.
+            </p>
+
+            {plansData?.map((p) => (
+              <PlansForm
+                plansData={plansData}
+                isOpened={false}
+                // setOpenedForm={setOpenedForm}
+                data={p}
+                setPlansData={setPlansData}
+                setOpenNewPlan={setOpenNewPlan}
+                openNewPlan={openNewPlan}
+              />
+            ))}
+            <PlansForm
+              isOpened
+              setPlansData={setPlansData}
+              data={{
+                plansName: '',
+                billingType: 'Recurring',
+                price: '',
+                billEvery: '',
+                billingCycle: '',
+              }}
+            />
+
+            <hr />
+            <div className='formButtons'>
+              <button type='button' className='cancelButton'>
+                Cancel
+              </button>
+              <button type='button' className='createButton'>
+                Create
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default CreateService
