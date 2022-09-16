@@ -12,7 +12,7 @@
 .rotate-180 {
   transform: rotate(180deg);
 }
-.mohsin {
+.priceAndBill-Wrap {
   display: flex;
   flex-direction: column;
 }
@@ -245,7 +245,7 @@
 
     .selectedPlan-Wrapper {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 0.7fr 0fr;
       width: 100%;
       column-gap: 2rem;
 

@@ -136,7 +136,7 @@ export default function PlansForm({
               className={`${
                 plansFormRecord.billingType === 'Recurring'
                   ? 'priceAndBill-Wrapper'
-                  : 'mohsin'
+                  : 'priceAndBill-Wrap'
               }`}
             >
               <label
