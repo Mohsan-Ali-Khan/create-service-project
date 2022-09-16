@@ -1,13 +1,22 @@
 import { useState } from 'react'
-import { BsPlusLg } from 'react-icons/bs'
 import PlansForm from 'components/PlansForm'
+import { BsPlusLg } from 'react-icons/bs'
+import { IoFileTrayStackedOutline } from 'react-icons/io5'
 
 import 'containers/createService/styles.scss'
 
 function CreateService() {
-  const [spin, setSpin] = useState(true)
+  const [spin, setSpin] = useState('plus')
   const [openNewPlan, setOpenNewPlan] = useState(true)
   const [plansData, setPlansData] = useState([])
+
+  const spinTimeout = () => {
+    setSpin('loading')
+    setTimeout(() => {
+      setSpin('stack')
+    }, 1500)
+  }
+
   return (
     <div className='main-survey-container'>
       <div className='survey-container'>
@@ -33,27 +42,27 @@ function CreateService() {
                   <div className='imageMainDiv'>
                     <div
                       className='product-addImage'
-                      onClick={() => {
-                        setSpin(!spin)
-                      }}
-                      onKeyDown={() => {
-                        setSpin(!spin)
-                      }}
+                      onClick={spinTimeout}
+                      onKeyDown={spinTimeout}
                       tabIndex={0}
                       role='button'
                     >
-                      {spin ? (
-                        <BsPlusLg className='product-addIcon' />
-                      ) : (
+                      {spin === 'loading' && (
                         <button type='button' style={{ border: 'none' }}>
-                          <div className='spinner-container'>
-                            <div className='loading-spinner' />
-                          </div>
+                          <div className='loading-spinner' />
                         </button>
+                      )}
+
+                      {spin === 'plus' && (
+                        <BsPlusLg className='product-addIcon' />
+                      )}
+
+                      {spin === 'stack' && (
+                        <IoFileTrayStackedOutline className='product-addIcon' />
                       )}
                     </div>
 
-                    {!spin && (
+                    {spin === 'stack' && (
                       <div className='imageButtons'>
                         <p className='editImage'>Edit</p>
                         <p className='removeImage'>Remove</p>
