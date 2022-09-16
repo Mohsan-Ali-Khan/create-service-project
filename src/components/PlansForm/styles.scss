@@ -24,22 +24,13 @@
   font-weight: 600;
   color: #505050;
 }
-// .iconDivBg {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 25px;
-//   height: 25px;
-//   margin: auto;
-//   position: relative;
-//   background-color: #2a70f1;
-// }
+
 .iconDiv {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
+  width: 1.563rem;
+  height: 1.563rem;
   margin: auto;
   position: relative;
 
@@ -52,7 +43,7 @@
     background: white;
     padding: 0.5rem 3rem 1rem 1rem;
     box-shadow: 0 -4px 7px 0 rgba(0, 0, 0, 0.11),
-      0 6px 20px 0 rgba(0, 0, 0, 0.1);
+      0 6px 1.25rem 0 rgba(0, 0, 0, 0.1);
     border-radius: 0.3rem;
     border: 1px solid lightgray;
     .duplicatePlanTypo {
@@ -66,6 +57,17 @@
       color: red;
     }
   }
+}
+.billingDesc {
+  margin-top: -0.5rem;
+  text-align: start;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.5px;
+  line-height: 1.875rem;
+  letter-spacing: 0.26px;
+  color: #555555;
 }
 .iconDiv2 {
   display: flex;
@@ -84,17 +86,17 @@
     display: flex;
     justify-content: space-between;
     .surveyCard__productSelect {
-      margin-bottom: 10px;
-      padding: 10px 20px 10px 10px;
-      width: 42%;
+      margin-bottom: 0.625rem;
+      padding: 0.625rem 1.25rem 0.625rem 0.625rem;
+      width: 45%;
       border-radius: 5px;
       background: transparent;
       border: 1px solid rgb(240, 240, 240);
     }
     .input-2 {
-      margin-bottom: 10px;
-      padding: 10px 20px 10px 10px;
-
+      margin-bottom: 0.625rem;
+      padding: 0.625rem 1.25rem 0.625rem 0.625rem;
+      width: 38%;
       border-radius: 5px;
       background: transparent;
       border: 1px solid #f0f0f0;
@@ -102,31 +104,39 @@
   }
 
   .plan__btn-group {
-    width: fit-content;
-    margin-bottom: 10px;
+    width: 65%;
+    margin-bottom: 0.625rem;
     display: flex;
-    border: 1px solid rgb(240, 240, 240);
-    flex-wrap: wrap;
+    border: 1px solid #ededed;
     border-radius: 4px;
     .plan__selected-menu {
-      background-color: #d3e2ff;
-      color: #2a70f1;
+      background-color: #d4e2ff;
       font-size: small;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 8px;
+      flex: 50%;
+      text-align: center;
+      padding: 0.75rem;
+      font-family: 'Roboto';
+      font-style: normal;
       font-weight: 700;
+      font-size: 0.938rem;
+      width: 50%;
+      letter-spacing: 0.26px;
+      color: #286ef1;
     }
 
     .plan__abc {
       font-size: small;
-      padding: 8px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 700;
+      width: 50%;
+      flex: 50%;
+      padding: 0.75rem;
+      text-align: center;
       color: $grey;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.938rem;
+      letter-spacing: 0.26px;
+      color: #777777;
     }
   }
   .product-form {
@@ -135,11 +145,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 100%;
-      column-gap: 2rem;
+      column-gap: 1.3rem;
       .productName-Wrapper {
         .input-1 {
-          margin-bottom: 10px;
-          padding: 10px 20px 10px 10px;
+          margin-bottom: 0.625rem;
+          padding: 0.625rem 1.25rem 0.625rem 0.625rem;
           height: 45%;
           border-radius: 5px;
           background: transparent;
@@ -148,8 +158,8 @@
       }
       .productImage-Wrapper {
         .input-1 {
-          margin-bottom: 10px;
-          padding: 10px 20px 10px 10px;
+          margin-bottom: 0.625rem;
+          padding: 0.625rem 1.25rem 0.625rem 0.625rem;
           height: 25%;
           border-radius: 5px;
           background: transparent;
@@ -161,13 +171,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 100%;
-      column-gap: 2rem;
+      column-gap: 1.3rem;
       .pricing-Wrapper {
         text-align: start;
         display: contents;
         .input-1 {
-          margin-bottom: 10px;
-          padding: 10px 20px 10px 10px;
+          margin-bottom: 0.625rem;
+          padding: 0.625rem 1.25rem 0.625rem 0.625rem;
           height: auto;
           border-radius: 5px;
           background: transparent;
@@ -175,19 +185,28 @@
         }
         .pricing-label {
           text-align: start;
-          margin-bottom: 0.5rem;
-          margin-top: 1rem;
-          font-weight: 600;
-          color: #505050;
+          text-align: start;
+          margin-bottom: 0.4rem;
+          top: calc(50% - 1.25rem / 2 - 28px);
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 0.813rem;
+          line-height: 1.25rem;
+          letter-spacing: 0.26px;
+          color: #555555;
         }
         .pricing-label2 {
           text-align: start;
-          margin-bottom: 0.5rem;
-          margin-top: 1rem;
-          font-weight: 600;
-          color: #505050;
-          display: flex;
-          justify-content: space-between;
+          margin-bottom: 0.4rem;
+          top: calc(50% - 1.25rem / 2 - 28px);
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 0.813rem;
+          line-height: 1.25rem;
+          letter-spacing: 0.26px;
+          color: #555555;
           .pricingLabel-options {
             width: 30%;
             display: flex;
@@ -200,14 +219,14 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 100%;
-      column-gap: 2rem;
+      column-gap: 1.3rem;
 
       .priceAndBill-Wrapper {
         text-align: start;
         display: contents;
         .input-1 {
-          margin-bottom: 10px;
-          padding: 10px 20px 10px 10px;
+          margin-bottom: 0.625rem;
+          padding: 0.625rem 1.25rem 0.625rem 0.625rem;
           height: auto;
           border-radius: 5px;
           background: transparent;
@@ -217,8 +236,14 @@
           text-align: start;
           margin-bottom: 0.5rem;
           margin-top: 1rem;
-          font-weight: 600;
-          color: #505050;
+          top: calc(50% - 1.25rem / 2 - 42.5px);
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 0.813rem;
+          line-height: 1.25rem;
+          letter-spacing: 0.26px;
+          color: #555555;
         }
       }
     }
@@ -226,15 +251,15 @@
       display: grid;
       grid-template-columns: 1fr;
       width: 47.9%;
-      column-gap: 2rem;
+      column-gap: 1.3rem;
       height: auto;
 
       .priceAndBill-Wrapper {
         text-align: start;
         display: contents;
         .input-1 {
-          margin-bottom: 10px;
-          padding: 10px 20px 10px 10px;
+          margin-bottom: 0.625rem;
+          padding: 0.625rem 1.25rem 0.625rem 0.625rem;
           height: auto;
           border-radius: 5px;
           background: transparent;
@@ -247,7 +272,7 @@
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 0.7fr 0fr;
       width: 100%;
-      column-gap: 2rem;
+      column-gap: 1.3rem;
 
       .selectedPlan-Wrapper {
         text-align: start;
@@ -267,15 +292,15 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 100%;
-      column-gap: 2rem;
+      column-gap: 1.3rem;
       .billingCycles-Wrapper {
         text-align: start;
         display: contents;
         display: flex;
         flex-direction: column;
         .input-1 {
-          margin-bottom: 10px;
-          padding: 10px 20px 10px 10px;
+          margin-bottom: 0.625rem;
+          padding: 0.625rem 1.25rem 0.625rem 0.625rem;
           height: auto;
           border-radius: 5px;
           background: transparent;
@@ -285,25 +310,37 @@
           text-align: start;
           margin-bottom: 0.5rem;
           margin-top: 1rem;
-          font-weight: 600;
-          color: #505050;
+          top: calc(50% - 1.25rem / 2 - 42.5px);
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 0.813rem;
+          line-height: 1.25rem;
+
+          letter-spacing: 0.26px;
+
+          color: #555555;
         }
       }
-    }
-
-    .product-pricingDesc {
-      color: $grey;
-      margin-top: -0.5rem;
-      font-size: 0.9rem;
-      font-weight: 400;
-      text-align: start;
     }
   }
 
   .addPlan-Wrapper {
     width: 50%;
     display: flex;
-    margin-top: 10px;
+    margin-top: 14px;
+    margin-bottom: 1.563rem;
+
+    top: calc(50% - 1.25rem / 2);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    text-align: center;
+    letter-spacing: 0.26px;
+    color: #000000;
 
     .addPlanButton {
       width: 50%;
@@ -311,7 +348,7 @@
       justify-content: space-around;
       align-items: center;
       background: transparent;
-      padding: 1rem;
+      padding: 0.7rem 1rem;
       border: 1px solid #f0f0f0;
       border-radius: 4px;
       font-weight: 700;

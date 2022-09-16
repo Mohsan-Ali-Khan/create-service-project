@@ -60,20 +60,7 @@ export default function PlansForm({
           <div className='pricing-Wrapper'>
             <div className='pricing-Wrapper'>
               <label className='pricing-label'>Plan Name</label>
-              <label className='pricing-label2'>
-                Billing Type
-                <div className='pricingLabel-options'>
-                  <div className={`${option ? 'iconDiv' : 'iconDivBg'}`}>
-                    <BsThreeDots className='optionIcon' />
-                  </div>
-                  <div className='iconDiv2'>
-                    <BsChevronDown
-                      className={`${opened ? 'rotate-180' : ''}`}
-                      onClick={() => setOpened(false)}
-                    />
-                  </div>
-                </div>
-              </label>
+              <label className='pricing-label2'>Billing Type</label>
             </div>
 
             <div className='pricing-Wrapper'>
@@ -199,8 +186,8 @@ export default function PlansForm({
                   onChange={handleBillingCycleChange}
                 />
 
-                <p className='product-pricingDesc'>
-                  Leave this empty to auto re-new this plan until cancelled.
+                <p className='billingDesc'>
+                  Leave this empty to auto-renew this plan until canceled.
                 </p>
               </div>
             </div>
@@ -243,7 +230,6 @@ export default function PlansForm({
               </div>
             </div>
           </div>
-          <hr />
         </>
       )}
     </div>

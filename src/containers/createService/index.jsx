@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import PlansForm from 'components/PlansForm'
 import { BsPlusLg } from 'react-icons/bs'
-import { IoFileTrayStackedOutline } from 'react-icons/io5'
+import orionServer from '../../assets/orionServer.svg'
 
 import 'containers/createService/styles.scss'
 
@@ -21,7 +21,7 @@ function CreateService() {
     <div className='main-survey-container'>
       <div className='survey-container'>
         <div className='cancel-survey'>
-          <h3>Create Product or Service</h3>
+          <h3 className='serviceFormHeading'>Create Product or Service</h3>
           <h4 className='sectionHeading'>General Info</h4>
           <form className='product-form'>
             <div className='product-Wrapper'>
@@ -41,7 +41,11 @@ function CreateService() {
                 <div className='product-addImageWrapper'>
                   <div className='imageMainDiv'>
                     <div
-                      className='product-addImage'
+                      className={`${
+                        spin === 'stack'
+                          ? 'product-addImageStack'
+                          : 'product-addImage'
+                      }`}
                       onClick={spinTimeout}
                       onKeyDown={spinTimeout}
                       tabIndex={0}
@@ -58,7 +62,7 @@ function CreateService() {
                       )}
 
                       {spin === 'stack' && (
-                        <IoFileTrayStackedOutline className='product-addIcon' />
+                        <img src={orionServer} alt='orion_server' />
                       )}
                     </div>
 
@@ -87,13 +91,13 @@ function CreateService() {
               <PlansForm
                 plansData={plansData}
                 isOpened={false}
-                // setOpenedForm={setOpenedForm}
                 data={p}
                 setPlansData={setPlansData}
                 setOpenNewPlan={setOpenNewPlan}
                 openNewPlan={openNewPlan}
               />
             ))}
+            <hr className='hrTag' />
             <PlansForm
               isOpened
               setPlansData={setPlansData}

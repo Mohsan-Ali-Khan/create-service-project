@@ -8,13 +8,34 @@
     transform: rotate(360deg);
   }
 }
+
+.hrTag {
+  border: transparent;
+  border-top: 1px solid transparent;
+}
+
+.pricing-Wrapper:first-child {
+  margin-top: 2rem;
+}
+
 .loading-spinner {
-  width: 10px;
-  height: 10px;
-  border: 2px solid #f3f3f3; /* Light grey */
-  border-top: 2px solid #383636; /* Black */
+  width: 0.625rem;
+  height: 0.625rem;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #383636;
   border-radius: 50%;
   animation: spinner 1.5s infinite linear;
+}
+
+.serviceFormHeading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.188rem;
+  text-align: center;
+  letter-spacing: 0.26px;
+  color: #000000;
 }
 
 .main-survey-container {
@@ -29,13 +50,32 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width: 100vh;
+    width: 50rem;
   }
 
   .sectionHeading {
     text-align: start;
-    font-weight: 700;
+
+    top: calc(50% - 1.875rem / 2 - 83px);
     width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.875;
+    letter-spacing: 0.26px;
+    color: #000000;
+  }
+  .product-addImageDesc {
+    top: 80.95%;
+    bottom: 0%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.26px;
+    color: #555555;
   }
 
   .product-form {
@@ -44,21 +84,26 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 100%;
-      column-gap: 2rem;
+      column-gap: 1.5rem;
       .productName-Wrapper {
         display: contents;
         .productName-label {
           text-align: start;
-          margin-bottom: 0.5rem;
-          margin-top: 1rem;
-          font-weight: 600;
-          color: rgb(80, 80, 80);
+          margin-bottom: 0.4rem;
+          top: calc(50% - 1.25rem / 2 - 28px);
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 0.813rem;
+          line-height: 1.25rem;
+          letter-spacing: 0.26px;
+          color: #555555;
         }
         .input-1 {
-          margin-bottom: 10px;
-          padding: 10px 20px 10px 10px;
+          margin-bottom: 0.625rem;
+          padding: 0.625rem 1.25rem 0.625rem 0.625rem;
           height: 45%;
-          border-radius: 5px;
+          border-radius: 0.313rem;
           background: transparent;
           border: 1px solid #f0f0f0;
         }
@@ -67,10 +112,10 @@
         text-align: start;
         display: contents;
         .input-1 {
-          margin-bottom: 10px;
-          padding: 10px 20px 10px 10px;
+          margin-bottom: 0.625rem;
+          padding: 0.625rem 1.25rem 0.625rem 0.625rem;
           height: 25%;
-          border-radius: 5px;
+          border-radius: 0.313rem;
           background: transparent;
           border: 1px solid #f0f0f0;
         }
@@ -94,6 +139,17 @@
           .product-addIcon {
             color: #1782e6;
           }
+        }
+
+        .product-addImageStack {
+          background-color: #e3eaf9;
+          border-radius: 0.2rem;
+          width: 2.6rem;
+          height: 2.6rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 0.5rem;
         }
         .product-addImageWrapper {
           color: $grey;
@@ -121,11 +177,18 @@
     }
 
     .product-pricingDesc {
-      color: $grey;
-      margin-top: -0.5rem;
-      font-size: 0.9rem;
+      left: 3.75%;
+      right: 3.75%;
+      top: 40.43%;
+      bottom: 56.46%;
+      font-family: 'Roboto';
+      font-style: normal;
       font-weight: 400;
+      font-size: 0.938rem;
+      line-height: 1.875rem;
       text-align: start;
+      letter-spacing: 0.26px;
+      color: #555555;
     }
   }
 
